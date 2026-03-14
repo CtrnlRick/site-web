@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alerte — Campagne de sensibilisation</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    min-height: 100vh;
+    background: #F7F5F0;
+    font-family: 'DM Sans', sans-serif;
+    display: flex; align-items: center; justify-content: center;
+    padding: 1.5rem;
+  }
+
+  .card {
+    max-width: 480px; width: 100%;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 32px rgba(0,0,0,0.07);
+    animation: fadeUp 0.5s ease;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .top-bar {
+    background: #D94F3D;
+    padding: 1rem 1.5rem;
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .top-bar-icon { font-size: 1.3rem; }
+  .top-bar-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem; letter-spacing: 0.14em;
+    text-transform: uppercase; color: white; opacity: 0.9;
+  }
+
+  .body { padding: 2rem 1.75rem; }
+
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.75rem; line-height: 1.2;
+    font-weight: 400; margin-bottom: 1.25rem;
+    color: #1A1916;
+  }
+  h1 em { font-style: italic; color: #D94F3D; }
+
+  .intro {
+    font-size: 0.9rem; color: #5A5550;
+    line-height: 1.75; margin-bottom: 1.75rem;
+  }
+
+  .consequences {
+    display: flex; flex-direction: column; gap: 0.6rem;
+    margin-bottom: 2rem;
+  }
+  .consequence {
+    display: flex; align-items: flex-start; gap: 0.75rem;
+    padding: 0.875rem 1rem;
+    background: #FDF0EE;
+    border-left: 3px solid #D94F3D;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.85rem; line-height: 1.55; color: #1A1916;
+  }
+  .consequence-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+
+  .safe-note {
+    background: #EEF7F2;
+    border: 1px solid #A8D4BC;
+    border-radius: 8px;
+    padding: 1rem 1.125rem;
+    font-size: 0.82rem; color: #2A7A4B;
+    line-height: 1.6; margin-bottom: 1.75rem;
+    display: flex; gap: 0.6rem; align-items: flex-start;
+  }
+
+  .cta {
+    display: block; width: 100%;
+    padding: 1rem;
+    background: #1A1916; color: white;
+    text-decoration: none; text-align: center;
+    border-radius: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem; letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: background 0.2s;
+  }
+  .cta:hover { background: #D94F3D; }
+
+  .footer-note {
+    text-align: center; margin-top: 1.25rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: #B0AAA4;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="top-bar">
+    <div class="top-bar-icon">🎣</div>
+    <div class="top-bar-label">Campagne de sensibilisation — simulation</div>
+  </div>
+  <div class="body">
+    <h1>Vous venez de vous faire <em>hameçonner.</em></h1>
+
+    <p class="intro">
+      Vous avez cliqué sur un lien de phishing simulé. Dans une attaque réelle, voici ce qui aurait pu se passer en quelques secondes :
+    </p>
+
+    <div class="consequences">
+      <div class="consequence">
+        <span class="consequence-icon">🔓</span>
+        Vos identifiants (email + mot de passe) auraient été volés silencieusement.
+      </div>
+      <div class="consequence">
+        <span class="consequence-icon">📱</span>
+        Votre code 2FA aurait pu être intercepté en temps réel — le compte quand même compromis.
+      </div>
+      <div class="consequence">
+        <span class="consequence-icon">💼</span>
+        L'accès à votre messagerie, vos fichiers, vos outils professionnels aurait été ouvert à l'attaquant.
+      </div>
+      <div class="consequence">
+        <span class="consequence-icon">⏱️</span>
+        Vous ne l'auriez appris que des heures — parfois des jours — plus tard.
+      </div>
+    </div>
+
+    <div class="safe-note">
+      <span>✅</span>
+      <span><strong>Pas de panique.</strong> Ceci est un test interne. Aucune donnée n'a été collectée. L'objectif est de vous aider à reconnaître ces attaques avant qu'elles soient réelles.</span>
+    </div>
+
+    <a class="cta" href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/fiches-reflexes/hameconnage-phishing#definition-phishing" target="_blank">
+      Cliquer ici pour en savoir plus →
+    </a>
+
+    <div class="footer-note">Organisé par votre équipe sécurité</div>
+  </div>
+</div>
+</body>
+</html>
